@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index1.css') }}">
+<body style="background-color: #c9b18e">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div class="container">
+    	<form action = 'http://localhost:5000/resumes_uploaded' method="POST" enctype="multipart/form-data">
+        	<input type="file" name="file" multiple="">
+        	<input type="submit" value="upload">
+    	</form>
+    </div>
+</body>
+</html>

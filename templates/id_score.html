@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index1.css') }}">
+<body style="background-color: #c9b18e">
+   <body>
+    <div class="container">
+      <table border = 1>
+          <tr>
+              
+              <th>score</th>
+          </tr>
+          {% for val in range(0, result['score']|length) %}
+            <tr>
+                <td><a href = "{{ result['paths'][val] }}"> {{ result['score'][val][0] }}</a></td>
+                <br><br><br>
+                <td> {{ result['score'][val][1] }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+    </div>
+   </body>
+</html>
+
